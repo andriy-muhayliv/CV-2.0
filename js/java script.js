@@ -1,6 +1,7 @@
+let video = document.querySelector('video');
+
 window.onload = function () {
-    let vol = document.querySelector('video');
-    vol.volume = 0.1;
+    video.play();
 }
 
 let modal = document.querySelector('.modal');
