@@ -50,7 +50,6 @@ mode.onclick = function () {
     }
     
 }
-console.log(mode.textContent);
 
 
 let Blue = document.querySelector('#imgBlue');
