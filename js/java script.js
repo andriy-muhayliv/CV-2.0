@@ -1,8 +1,8 @@
 let video = document.querySelector('video');
 
 window.onload = function () {
-    video.play();
-}
+    video.aplay();
+};
 
 let modal = document.querySelector('.modal');
 let btn = document.querySelector('#myBtn');
@@ -19,6 +19,30 @@ window.onclick = function (event) {
         modal.style.display = 'none';
     }
 }
+
+let mode = document.querySelector('#dwMode');
+let secContainer = document.querySelector('.second--containerBG');
+let gradOne = document.querySelector('#gradOne');
+let gradTwo = document.querySelector('#gradTwo');
+let footer = document.querySelector('footer');
+
+mode.onclick = function () {
+    if (mode.textContent == 'Dark mode') {
+        mode.innerHTML = 'White mode';  
+        secContainer.classList.add('dark--mode');
+        gradOne.classList.add ('dark--mode_gradient--one');
+        gradTwo.classList.add('dark--mode_gradient--two');
+        footer.style.background = 'linear-gradient(360deg, rgba(0, 0, 0, 1) 0%, rgba(50, 55, 62,1) 96%)';
+    } else {
+        mode.innerHTML = 'Dark mode';
+        secContainer.classList.remove ('dark--mode');
+        gradOne.classList.remove ('dark--mode_gradient--one');
+        gradTwo.classList.remove('dark--mode_gradient--two');
+        footer.style.background = 'linear-gradient(360deg, rgba(0, 0, 0, 1) 0%, rgba(255,255,255,1) 96%)';
+    }
+    
+}
+console.log(mode.textContent);
 
 
 let Blue = document.querySelector('#imgBlue');

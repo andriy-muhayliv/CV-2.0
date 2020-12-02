@@ -45,6 +45,28 @@ a {
     left: 0;
     background-size: cover;
 
+    button {
+        position: relative;
+        font-size: 10px;
+        font-family: 'Monoton', cursive;
+        z-index: 10;
+        background-color: black;
+        border: 1px solid white;
+        color: white;
+        border-radius: 5px;
+        padding: 5px;
+        margin: 5px 0 5px 5px;
+        cursor: pointer;
+        transition: 0.5s ease-in-out;
+        -webkit-text-stroke: 0.01px black;
+
+        &:hover {
+            color: black;
+            background-color: white;
+            border: 1px solid black;
+        }
+    }
+
     video {
         position: absolute;
         top: 0;
@@ -63,7 +85,7 @@ a {
     left: 50%;
     transform: translate(-50%, -50%);
         z-index: 3;
-        
+
         a {
             position: relative;
             top: 50px;
@@ -267,6 +289,7 @@ a {
 
     .second--container__blok--right {
         opacity: 0;
+        background-color: rgb(255, 255, 255, 0.7);
         margin-top: 50px;
         width: 600px;
         min-height: 50vh;
@@ -314,6 +337,17 @@ footer {
     
 }
 
+.dark--mode {
+    background-color: #32373E;
+}
+
+.dark--mode_gradient--one {
+    background: linear-gradient(180deg, rgba(0,0,0,0) 80%, rgba(50, 55, 62,1) 95%);
+}
+
+.dark--mode_gradient--two {
+    background: linear-gradient(180deg, rgba(0,0,0,0) 60%, rgb(50, 55, 62, 1) 90%);
+}
 
 
 @media (max-width:600px) {
