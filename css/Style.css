@@ -43,7 +43,7 @@ a {
   background-size: cover;
 }
 .first--container button {
-  position: relative;
+  position: absolute;
   font-size: 10px;
   font-family: "Monoton", cursive;
   z-index: 10;
