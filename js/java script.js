@@ -57,6 +57,7 @@ let Orange = document.querySelector('#imgOrange');
 let skillsOpacityLeft = document.querySelector('.second--container__blok--left');
 let skillsOpacityRight = document.querySelector('.second--container__blok--right');
 let skillsOpacityThree = document.querySelector('.second--container__blok--three');
+let bothImg = document.querySelectorAll('.wrapi');
 skillsOpacityLeft.style.marginLeft = '-1000px';
 skillsOpacityRight.style.marginRight = '-1000px';
 skillsOpacityThree.style.marginRight = '-1000px';
@@ -75,6 +76,11 @@ window.addEventListener('scroll', function() {
         skillsOpacityThree.style.marginLeft = '0px';
         skillsOpacityThree.style.opacity = '1';
     }
+      if (scrollTop >= 1180 ) {
+        for (i=0; i < bothImg.length; i++) {
+        bothImg[i].style.transform = 'scale(1)';
+        }
+    }
     else if (scrollTop <= 150 ) {
         skillsOpacityLeft.style.opacity = 0;
         skillsOpacityLeft.style.marginLeft = '-1000px';
@@ -87,6 +93,12 @@ window.addEventListener('scroll', function() {
         skillsOpacityThree.style.opacity = 0;
         skillsOpacityThree.style.marginLeft = '-1000px';
     }
+        else if (scrollTop <= 1180 ) {
+        for (i=0; i < bothImg.length; i++) {
+        bothImg[i].style.transform = 'scale(0)';
+        }
+    }
+    
 
     if (scrollTop >= 200) {
         Orange.style.left = '-300px';
