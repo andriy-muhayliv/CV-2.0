@@ -1,9 +1,3 @@
-let video = document.querySelector('video');
-
-window.onload = function () {
-    video.aplay();
-};
-
 let modal = document.querySelector('.modal');
 let btn = document.querySelector('#myBtn');
 let span = document.querySelector('.close');
