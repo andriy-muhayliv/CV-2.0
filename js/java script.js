@@ -30,6 +30,7 @@ mode.onclick = function () {
         mode.style.backgroundColor = 'white';
         mode.style.color = 'black';
         mode.style.border = '1px solid black'
+        localStorage.setItem('siteMode', 0);
 
     } else {
         mode.innerHTML = 'Dark mode';
@@ -40,11 +41,16 @@ mode.onclick = function () {
         mode.style.backgroundColor = 'black';
         mode.style.color = 'white';
         mode.style.border = '1px solid white'
-        
-    }
-    
+        localStorage.setItem('siteMode', 1);
+    }  
 }
 
+window.onload = function () {
+    let seveMode = localStorage.getItem('siteMode');
+    if (seveMode == 0) {
+    mode.onclick();
+    }
+}
 
 let Blue = document.querySelector('#imgBlue');
 let Orange = document.querySelector('#imgOrange');
